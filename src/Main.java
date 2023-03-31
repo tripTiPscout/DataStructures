@@ -1,3 +1,5 @@
+import BinaryTree.Order;
+import BinaryTree.BinaryTree;
 import LinkedList.LinkedList;
 import LinkedList.LinkedListCustom;
 
@@ -8,7 +10,34 @@ public class Main {
 
         testLinkedListCustom();
 
+        testBinaryTree();
 
+    }
+
+    private static void testBinaryTree() {
+        BinaryTree<Integer> binaryTree = new BinaryTree<Integer>();
+
+        System.out.println(binaryTree.add(1));
+        System.out.println(binaryTree.add(8));
+        System.out.println(binaryTree.add(2));
+        System.out.println(binaryTree.add(12));
+        System.out.println(binaryTree.add(5));
+        System.out.println(binaryTree.add(3));
+        System.out.println(binaryTree.add(6));
+        System.out.println(binaryTree.add(9));
+        System.out.println(binaryTree.add(4));
+        System.out.println(binaryTree.add(7));
+        binaryTree.print(Order.DECREASING);
+        binaryTree.print(Order.INCREASING);
+        System.out.println(binaryTree.remove(1));
+        System.out.println(binaryTree.remove(2));
+        System.out.println(binaryTree.remove(5));
+        System.out.println(binaryTree.remove(12));
+        System.out.println(binaryTree.contains(9));
+        binaryTree.print(Order.DECREASING);
+        binaryTree.print(Order.INCREASING);
+        System.out.println(binaryTree.isEmpty());
+        System.out.println(binaryTree.size());
     }
 
     private static void testLinkedListCustom() {
